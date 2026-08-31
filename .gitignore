@@ -1,0 +1,29 @@
+# Environments
+venv/
+.env
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Data and logs
+*.log
+data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Spark / Structured Streaming Checkpoints
+spark-warehouse/
+checkpoints/
