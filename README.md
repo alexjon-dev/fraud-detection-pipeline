@@ -23,3 +23,4 @@ This project builds a system that watches banking transactions as they happen an
 - `infrastructure/`: IaC and deployment scripts.
 - `tests/`: Unit and integration tests.
 - `docs/`: Additional documentation.
+- Spark Structured Streaming : Fraud Rules Engine, Feature Calculation, Duplicate Detection.
