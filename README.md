@@ -22,4 +22,5 @@ This project builds a system that watches banking transactions as they happen an
 - `monitoring/`: Grafana and Prometheus configurations.
 - `infrastructure/`: IaC and deployment scripts.
 - `tests/`: Unit and integration tests.
+- `docs/`: Additional documentation.
   
