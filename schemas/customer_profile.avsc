@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "CustomerProfile",
+  "namespace": "com.fraud.detection.events",
+  "doc": "Schema for customer profiles used in fraud detection",
+  "fields": [
+    { "name": "customer_id", "type": "string", "doc": "Unique identifier for the customer" },
+    { "name": "account_created_date", "type": "long", "doc": "Account creation date", "logicalType": "timestamp-millis" },
+    { "name": "average_daily_spend", "type": "double", "doc": "Historical average daily spend" },
+    { "name": "primary_location", "type": "string", "doc": "Primary location or country of the customer" },
+    { "name": "risk_segment", "type": "string", "doc": "Risk segment assigned to the customer (e.g., LOW_RISK)" },
+    { "name": "last_updated", "type": "long", "doc": "Timestamp of the last profile update", "logicalType": "timestamp-millis" }
+  ]
+}

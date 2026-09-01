@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "Merchant",
+  "namespace": "com.fraud.detection.events",
+  "doc": "Schema for merchant information",
+  "fields": [
+    { "name": "merchant_id", "type": "string", "doc": "Unique identifier for the merchant" },
+    { "name": "name", "type": "string", "doc": "Merchant name" },
+    { "name": "category", "type": "string", "doc": "Merchant category code (MCC) or category name" },
+    { "name": "country", "type": "string", "doc": "Merchant country" },
+    { "name": "trust_score", "type": "double", "doc": "Trust score of the merchant (0.0 to 1.0)" },
+    { "name": "last_updated", "type": "long", "doc": "Timestamp of the last update", "logicalType": "timestamp-millis" }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "Transaction",
+  "namespace": "com.fraud.detection.events",
+  "doc": "Schema for banking transactions",
+  "fields": [
+    { "name": "transaction_id", "type": "string", "doc": "Unique identifier for the transaction" },
+    { "name": "customer_id", "type": "string", "doc": "Unique identifier for the customer" },
+    { "name": "account_id", "type": "string", "doc": "Unique identifier for the account" },
+    { "name": "amount", "type": "double", "doc": "Transaction amount" },
+    { "name": "currency", "type": "string", "doc": "Currency code (e.g., INR, USD)" },
+    { "name": "merchant_id", "type": "string", "doc": "Unique identifier for the merchant" },
+    { "name": "merchant_category", "type": "string", "doc": "Category of the merchant" },
+    { "name": "transaction_type", "type": "string", "doc": "Type of transaction (e.g., card_payment)" },
+    {
+      "name": "location",
+      "type": {
+        "type": "record",
+        "name": "Location",
+        "fields": [
+          { "name": "latitude", "type": ["null", "double"], "default": null },
+          { "name": "longitude", "type": ["null", "double"], "default": null },
+          { "name": "city", "type": ["null", "string"], "default": null },
+          { "name": "country", "type": ["null", "string"], "default": null }
+        ]
+      }
+    },
+    { "name": "status", "type": "string", "doc": "Status of the transaction (e.g., PENDING, AUTHORIZED, COMPLETED, FAILED, DECLINED)", "default": "PENDING" },
+    { "name": "timestamp", "type": "string", "doc": "ISO 8601 timestamp of the transaction" },
+    { "name": "event_timestamp", "type": "long", "doc": "Epoch timestamp of when the event was generated, in milliseconds", "logicalType": "timestamp-millis" }
+  ]
+}
